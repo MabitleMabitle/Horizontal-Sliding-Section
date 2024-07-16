@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  inline-size: 100%;
+  block-size: 100vh;
+  background: linear-gradient(#368661, #296a4e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials-wrapper {
+  inline-size: 95%;
+  block-size: 90%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(images/pexels-stephen-leonardi-587681991-17082892.jpg) center no-repeat;
+  background-size: cover;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.testimonials-header {
+  position: absolute;
+  inset-block-start: 5%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.testimonials-header h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #ccc;
+}
+.testimonials-header h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.4rem;
+}
+
+.testimonials-header i {
+  font-size: 1.6rem;
+  color: rgb(255, 220, 62);
+  margin-inline: 0.5rem;
+}
+
+.testimonials {
+  inline-size: 55%;
+  block-size: 38rem;
+  position: absolute;
+  inset-block-start: 53%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.slider {
+  block-size: 100%;
+  inline-size: 500%;
+  display: flex;
+  transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.slide {
+  inline-size: 20%;
+  position: relative;
+}
+
+.slide-background {
+  inline-size: 70%;
+  block-size: 65%;
+  background-color: #296a4e;
+  position: absolute;
+  inset-block-start: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(-6deg);
+  border-radius: 2rem;
+  opacity: 0.7;
+}
+
+.slide-content {
+  inline-size: 70%;
+  block-size: 65%;
+  background-color: #fff;
+  position: absolute;
+  inset-block-start: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5rem;
+}
+
+.slide i {
+  font-size: 8rem;
+  color: #296a4e;
+  position: absolute;
+}
+
+.slide i:nth-child(1) {
+  inset-block-start: -20%;
+  inset-inline-start: 10%;
+}
+.slide i:nth-child(2) {
+  inset-block-end: -20%;
+  inset-inline-end: 10%;
+}
+
+.slide-image {
+  inline-size: 15rem;
+  block-size: 16rem;
+  position: relative;
+}
+
+.slide-image::after,
+.slide-image::before {
+  content: "";
+  inline-size: 100%;
+  block-size: 100%;
+  position: absolute;
+  border: 0.2rem solid rgba(0, 0, 0, 0.4);
+  border-start-start-radius: 3rem;
+  border-end-end-radius: 3rem;
+  z-index: -1;
+}
+
+.slide-image::after {
+  inset-block-start: -1rem;
+  inset-inline-start: -0.5rem;
+}
+
+.slide-image::before {
+  inset-block-end: -1rem;
+  inset-inline-end: -0.5rem;
+}
+
+.slide-image img {
+  inline-size: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-start-start-radius: 3rem;
+  border-end-end-radius: 3rem;
+}
+
+.slide-text {
+  inline-size: 70%;
+  padding-inline-start: 2rem;
+}
+
+.slide-text h3 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #111;
+  margin-block-end: 1rem;
+}
+
+.slide-text p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: rgb(30, 40, 35);
+  line-height: 1.2;
+  margin-block-end: 3rem;
+  inline-size: 35rem;
+}
+
+.slide-text .client {
+  font-size: 1.8rem;
+  color: rgb(11, 83, 47);
+}
+
+.controls i {
+  inline-size: 5rem;
+  block-size: 5rem;
+  background-color: #7b8584;
+  opacity: 0.6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #444;
+  position: absolute;
+  inset-block-start: 50%;
+  /* centering the arrows */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.controls i:nth-child(1) {
+  inset-inline-start: 15%;
+}
+.controls i:nth-child(2) {
+  inset-inline-end: 15%;
+}
+
+.dots {
+  position: absolute;
+  inset-block-end: 10%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.dots span {
+  inline-size: 1rem;
+  block-size: 1rem;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-inline: 1rem;
+  cursor: pointer;
+}
+
+.dots span.active {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  background-color: #fff;
+}
